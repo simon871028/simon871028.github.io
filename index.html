@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="bootstrap.min.css" rel="stylesheet" />
@@ -13,44 +13,53 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="./fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
     <!--load all styles -->
-    <title>My Portfolio!</title>
+    <title>SIMON HSIEH</title>
     <!--網頁標題左側顯示-->
     <link rel="icon" href="img/simon.ico" type="image/x-icon">
     <!--收藏夾顯示圖示-->
-    <link rel="shortcut icon" href="/img/simon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/simon.ico" type="image/x-icon">
+
 </head>
 
 
-<body>
-    <nav>
+<body data-target="#navbar-effect" data-spy="scroll">
+    <nav id="navbar-effect">
         <div class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
-            <a class="navbar-brand" style="color:whitesmoke" href="#">SIMON</a>
+            <a class="navbar-brand" style="color:whitesmoke" data-value="carouselExampleIndicators" href="#">SIMON</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="color:antiquewhite ">
-                    <a class="nav-item nav-link" href="#about"><i class="fas fa-user-circle"></i> About</a>
-                    <a class="nav-item nav-link" href="#"><i class="fas fa-code"></i> Projects</a>
+                    <a class="nav-item nav-link" data-value="about" href="#"><i class="fas fa-user-circle"></i>
+                        About</a>
+
+
+                    <a class="nav-item nav-link" data-value="projects" href="#"><i class="fas fa-code"></i>
+                        Projects</a>
+                    <a class="nav-item nav-link" href="https://github.com/simon871028"><i
+                            class="fab fa-github-square fa-lg"></i> Github</a>
                     <li class="nav-item nav-link dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-friends"></i>
                             Contact
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu outerconnect" style="background-color: black;">
-                            <li><a href="https://www.facebook.com/simon871028/" target="_blank" class="nav-link"><i
+                            <li><a href="https://www.facebook.com/simon871028/" class="nav-link"><i
                                         class="fab fa-facebook-square fa-lg" style="padding-left: 5px;"></i>
                                     Facebook</a></li>
-                            <li><a href="https://www.linkedin.com/in/simonhsieh-172230183/" target="_blank"
-                                    class="nav-link"><i class="fab fa-linkedin fa-lg" style="padding-left: 5px;"></i>
+                            <li><a href="https://www.linkedin.com/in/simonhsieh-172230183/" class="nav-link"><i
+                                        class="fab fa-linkedin fa-lg" style="padding-left: 5px;"></i>
                                     Linkedin</a></li>
-                            <li><a href="#" target="_blank" class="nav-link"><i class="fas fa-envelope-square fa-lg"
-                                        style="padding-left: 5px;"></i> Gmail</a></li>
+                            <li><a href="mailto:simon871028@gmail.com" class="nav-link"><i
+                                        class="fas fa-envelope-square fa-lg" style="padding-left: 5px;"></i>
+                                    Gmail</a>
+                            </li>
                         </ul>
                     </li>
-                    <a class="nav-item nav-link" href="https://github.com/simon871028"><i
-                            class="fab fa-github-square fa-lg"></i> Github</a>
                 </div>
             </div>
         </div>
     </nav>
+
+
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -80,33 +89,29 @@
         </a>
     </div>
 
-    <div id="about" class="row">
-        <span>
-            <img src="img/speechinmos.png" style="height:200px;">
-        </span>
-        <span style="padding-left: 30px;">
-            Hi ! My name is Simon Hsieh.
-            Currently:
-            Junior in National Taiwan University of Science and Technology</br>
-            Major in Computer Science and Finance</br>
-            Co-Founder & Software Engineer @ Taiwan Quick Match Co.
-        </span>
+    <div style="padding-bottom: 200px;" class="about" id="about">
+        <div>
+            <h1 class="hello"><strong>About Me</strong></h1>
+        </div>
+        <div class="row aboutme" id="aboutme" name="aboutme">
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="img/speechinmos.png" class="img-fluid">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 desc">
+
+                <h3><strong>SIMON HSIEH</strong></h3>
+                <p>
+                    Junior in National Taiwan University of Science and Technology</br>
+                    Major in Computer Science and Finance</br>
+                    Co-Founder & Software Engineer @ Taiwan Quick Match Technology Co.
+                </p>
+            </div>
+        </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="jquery-3.1.0.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -115,6 +120,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+
 </body>
 
 </html>
